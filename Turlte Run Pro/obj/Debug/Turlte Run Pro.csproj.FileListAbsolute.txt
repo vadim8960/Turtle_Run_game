@@ -1,0 +1,10 @@
+C:\Users\User\Desktop\Turlte Run Pro\Turlte Run Pro\bin\Debug\SmallBasicLibrary.dll
+C:\Users\User\Desktop\Turlte Run Pro\Turlte Run Pro\bin\Debug\SmallBasicLibrary.xml
+C:\Users\User\Desktop\Turlte Run Pro\Turlte Run Pro\bin\Debug\StringResources.dll
+C:\Users\User\Desktop\Turlte Run Pro\Turlte Run Pro\obj\Debug\Interop.SystemMonitor.dll
+C:\Users\User\Desktop\Turlte Run Pro\Turlte Run Pro\obj\Debug\Turlte Run Pro.csproj.ResolveComReference.cache
+C:\Users\User\Desktop\Turlte Run Pro\Turlte Run Pro\bin\Debug\Turtle Run Pro.exe.config
+C:\Users\User\Desktop\Turlte Run Pro\Turlte Run Pro\bin\Debug\Turtle Run Pro.exe
+C:\Users\User\Desktop\Turlte Run Pro\Turlte Run Pro\bin\Debug\Turtle Run Pro.pdb
+C:\Users\User\Desktop\Turlte Run Pro\Turlte Run Pro\obj\Debug\Turtle Run Pro.exe
+C:\Users\User\Desktop\Turlte Run Pro\Turlte Run Pro\obj\Debug\Turtle Run Pro.pdb

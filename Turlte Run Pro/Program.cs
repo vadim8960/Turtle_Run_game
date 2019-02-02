@@ -30,14 +30,10 @@ namespace System
 
         static void danger()
         {
-            GraphicsWindow.DrawImage(@"c:/Images_/house2n.jpg", 210, 200);
-            GraphicsWindow.DrawImage(@"c:/Images_/house2n.jpg", 950, 200);
-            GraphicsWindow.DrawImage(@"c:/Images_/house2n.jpg", 210, 500);
-            GraphicsWindow.DrawImage(@"c:/Images_/house2n.jpg", 950, 500);
-            /*GraphicsWindow.DrawRectangle(210, 200, 390, 200);
-            GraphicsWindow.DrawRectangle(950, 200, 390, 200);
-            GraphicsWindow.DrawRectangle(210, 500, 390, 200);
-            GraphicsWindow.DrawRectangle(950, 500, 390, 200);*/
+            GraphicsWindow.DrawImage(@"c:/Install_files/house2n.jpg", 210, 200);
+            GraphicsWindow.DrawImage(@"c:/Install_files/house2n.jpg", 950, 200);
+            GraphicsWindow.DrawImage(@"c:/Install_files/house2n.jpg", 210, 500);
+            GraphicsWindow.DrawImage(@"c:/Install_files/house2n.jpg", 950, 500);
         }
 
         static void op(ulong h, double s)
@@ -45,8 +41,8 @@ namespace System
             GraphicsWindow.Clear();
             string thg = "Счет: ", tv = "Скорость: ";
             GraphicsWindow.PenColor = "Black";
-            GraphicsWindow.DrawImage(@"c:/Images_/brick.jpg", 0, 0);
-            GraphicsWindow.DrawImage(@"c:/Images_/Osnova.png", 50, 100);
+            GraphicsWindow.DrawImage(@"c:/Install_files/brick.jpg", 0, 0);
+            GraphicsWindow.DrawImage(@"c:/Install_files/Osnova.png", 50, 100);
             GraphicsWindow.DrawRectangle(50, 100, 1440, 670);
             Program.danger();
             GraphicsWindow.BrushColor = "#00FFFF";
@@ -73,7 +69,7 @@ namespace System
                 (yt >= 500 - 7 && xt >= 200 - 7 && xt <= 600 + 7 && yt <= 700 + 7 && xt >= 200 + 7 && xt <= 600 + 7) ||
                 (yt >= 500 - 7 && xt >= 940 - 7 && xt <= 1340 + 7 && yt <= 700 + 7 && xt >= 940 + 7 && xt <= 1340 + 7))
             {
-                SoundPlayer pla = new SoundPlayer(@"C:/Images_/dead.wav");
+                SoundPlayer pla = new SoundPlayer(@"C:/Install_files/dead.wav");
                 pla.Play();
                 it = true;
                 GraphicsWindow.BrushColor = "#00FFFF";
@@ -81,7 +77,7 @@ namespace System
                 GraphicsWindow.DrawText(600, 170, "ВЫ ПОГИБЛИ! ВАШ СЧЕТ: " + hg);
                 GraphicsWindow.DrawText(400, 400, "Заново - Space");
                 GraphicsWindow.DrawText(900, 400, "Выйти - Escape");
-                var file = new FileStream(@"C:\Images_\hg.txt", FileMode.Open, FileAccess.Read);
+                var file = new FileStream(@"C:\Install_files\hg.txt", FileMode.Open, FileAccess.Read);
                 var reader = new StreamReader(file);
                 ulong maxhg = 0;
                 try
@@ -96,8 +92,8 @@ namespace System
                 Console.Write(maxhg);
                 if (maxhg < hg)
                 {
-                    IO.File.Delete(@"C:\Images_\hg.txt");
-                    var file1 = new FileStream(@"C:/Images_/hg.txt", FileMode.OpenOrCreate, FileAccess.Write);
+                    IO.File.Delete(@"C:\Install_files\hg.txt");
+                    var file1 = new FileStream(@"C:/Install_files/hg.txt", FileMode.OpenOrCreate, FileAccess.Write);
                     var writer = new StreamWriter(file1);
                     writer.WriteLine(Convert.ToString(maxhg));
                     GraphicsWindow.DrawText(40, 0, "NEW RECORD!!!");
@@ -124,8 +120,8 @@ namespace System
         {
             GraphicsWindow.Clear();
             GraphicsWindow.PenColor = "Black";
-            GraphicsWindow.DrawImage(@"c:/Images_/brick.jpg", 0, 0);
-            GraphicsWindow.DrawImage(@"c:/Images_/Osnova.png", 50, 100);
+            GraphicsWindow.DrawImage(@"c:/Install_files/brick.jpg", 0, 0);
+            GraphicsWindow.DrawImage(@"c:/Install_files/Osnova.png", 50, 100);
             GraphicsWindow.DrawRectangle(50, 100, 1440, 670);
             Program.danger();
             GraphicsWindow.BrushColor = "#00FFFF";
@@ -230,7 +226,7 @@ namespace System
                     GlobalVars.variables = 3;
                     Program.DrawPause();
                     var enter_s = new WaveOut();
-                    var e = new Mp3FileReader(@"c:/Images_/enter.mp3");
+                    var e = new Mp3FileReader(@"c:/Install_files/enter.mp3");
                     enter_s.Init(e);
                     while (true)
                     {
@@ -252,7 +248,7 @@ namespace System
                     yt <= ye + 15 && xt >= xe - 5 && xt <= xe + 15)
                 {
                     var eat_s = new WaveOut();
-                    var te = new Mp3FileReader(@"c:/Images_/eat.mp3");
+                    var te = new Mp3FileReader(@"c:/Install_files/eat.mp3");
                     eat_s.Init(te);
                     eat_s.Play();
                     hg += 10;
@@ -318,12 +314,12 @@ namespace System
         static void menu()
         {
             var enter_s = new WaveOut();
-            SoundPlayer menu_s = new SoundPlayer(@"c:/Images_/menu_sound.wav");
-            var e = new Mp3FileReader(@"c:/Images_/enter.mp3");
+            SoundPlayer menu_s = new SoundPlayer(@"c:/Install_files/menu_sound.wav");
+            var e = new Mp3FileReader(@"c:/Install_files/enter.mp3");
             enter_s.Init(e);
             menu_s.PlayLooping();
             GraphicsWindow.Clear();
-            GraphicsWindow.DrawImage(@"c:/Images_/Menu.png", 0, 0);
+            GraphicsWindow.DrawImage(@"c:/Install_files/Menu.png", 0, 0);
             GlobalVars.variables = 1;
             GraphicsWindow.KeyDown += GraphicsWindow_KeyDown;
             GraphicsWindow.FontSize = 35;
@@ -369,7 +365,7 @@ namespace System
                     GraphicsWindow.LastKey == "NumpadUp")
                 {
                     var pla = new WaveOut();
-                    var m = new WaveFileReader(@"c:/Images_/clic.wav");
+                    var m = new WaveFileReader(@"c:/Install_files/clic.wav");
                     pla.Init(m);
                     pla.Play();
                     GlobalVars.posMenu = 1;
@@ -384,7 +380,7 @@ namespace System
                     GraphicsWindow.LastKey == "NumpadDown")
                 {
                     var pla = new WaveOut();
-                    var m = new WaveFileReader(@"c:/Images_/clic.wav");
+                    var m = new WaveFileReader(@"c:/Install_files/clic.wav");
                     pla.Init(m);
                     pla.Play();
                     GlobalVars.posMenu = 2;
@@ -425,7 +421,7 @@ namespace System
             {
                 if (GraphicsWindow.LastKey == "Up")
                 {
-                    SoundPlayer pla = new SoundPlayer(@"c:/Images_/clic.wav");
+                    SoundPlayer pla = new SoundPlayer(@"c:/Install_files/clic.wav");
                     pla.Play();
                     GlobalVars.posPause = 1;
                     GraphicsWindow.FontSize = 25;
@@ -438,7 +434,7 @@ namespace System
                 }
                 else if (GraphicsWindow.LastKey == "Down")
                 {
-                    SoundPlayer pla = new SoundPlayer(@"c:/Images_/clic.wav");
+                    SoundPlayer pla = new SoundPlayer(@"c:/Install_files/clic.wav");
                     pla.Play();
                     GlobalVars.posPause = 2;
                     GraphicsWindow.FontSize = 25;
